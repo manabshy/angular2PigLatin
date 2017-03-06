@@ -5,3 +5,25 @@ input.ng-invalid  {
   border-left: 5px solid #a94442; /* red */
 }
 
+.card-block {
+    padding: 2rem 1.25rem;
+}
+
+.btn-primary {
+    border-color: #127674;
+}
+
+.form-control {
+    background-color: #e6e6e6;
+    border-color: #e6e6e6;
+}
+
+.form-control:focus {
+    border-color: #127674;
+}
+
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}

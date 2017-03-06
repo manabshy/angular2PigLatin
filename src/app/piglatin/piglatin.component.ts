@@ -17,6 +17,7 @@ export class PiglatinComponent implements OnInit {
   public ptext = new PigText("");
   public storeText: Array<any>;
   public output:string = "";
+  public error:string = "";
   pigtransform():string{
     console.log('here:' + this.ptext.pigtext);
     
@@ -31,8 +32,13 @@ export class PiglatinComponent implements OnInit {
 			}
 			else {
 				this.output = sLast + first + pigla;
+        this.error = "";
 			}
-	 }		
+	 }
+   else {
+     this.error = "Enter a valid word";
+     this.output = "";
+   }		
 
 
     console.log(this.output);

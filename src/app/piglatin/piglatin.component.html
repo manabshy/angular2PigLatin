@@ -1,26 +1,26 @@
-<p>
-  piglatin works!
-</p>
-
-
 <div class="container">
   <div class="row flex-items-xs-center">
-    <div class="card col-md-4 login-card">
+    <div class="card col-md-8">
       <div class="card-block">
         <form role="form" (submit)="pigtransform()">
           <p class="card-title mb-0" id="cardTitle">{{title}}</p>
           <div class="form-group">
             <label for="pigtext" class="sr-only">Word</label>
 
-              <input type="text" id="pigtext" name="pigtext" class="form-control" placeholder="Enter the word"
-                    [(ngModel)]="ptext.pigtext" required autofocus>
+            <input type="text" id="pigtext" name="pigtext" class="form-control" placeholder="Enter the word" [(ngModel)]="ptext.pigtext"
+              required autofocus>
 
           </div>
           <button [disabled]="loading" id="submitLogin" class="btn btn-lg btn-primary btn-block mt-2" name="submit" type="submit">Convert
           </button>
-          <br>  
-          <span *ngIf="output"><h2>Pig Latin Text:{{output}}</h2> </span>
 
+          <div *ngIf="output" class="alert alert-success" role="alert">
+            <strong>Well done!</strong> {{output}}
+          </div>
+          <div *ngIf="error" class="alert alert-danger" role="alert">
+            <strong>Error!</strong> {{error}}
+          </div>
+      
         </form>
       </div>
     </div>
