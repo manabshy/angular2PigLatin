@@ -7,8 +7,8 @@ describe('angular2-pig-latin App', function() {
     page = new Angular2PigLatinPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying Pig Latin Conversion', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Pig Latin Conversion');
   });
 });
